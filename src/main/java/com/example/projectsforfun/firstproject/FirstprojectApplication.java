@@ -12,16 +12,14 @@ import org.springframework.context.annotation.Bean;
 public class FirstprojectApplication {
 
 	public static void main(String[] args) {
-		args=new String[]{"SD"};
-		args[0]="fd";
+
 		SpringApplication.run(FirstprojectApplication.class, args);
 	}
 
 	@Bean
 	public CommandLineRunner commandLineRunner(String... x){
 
- 		return runner -> System.out.println("helloWorld"+runner[0]);
-
+         return null;
 	}
 
 	@Bean
@@ -30,8 +28,7 @@ public class FirstprojectApplication {
 		return runner ->{
 
 
-			int numberOfStudentsDeleted= studentDAO.deletAll();
-			System.out.println(numberOfStudentsDeleted);
+			 studentDAO.saveStudent(createStudent());
 			// studentDAO.removeStudent(1);
  		//	studentDAO.updateStudentByFirstName("Ali","Mohamed");
 

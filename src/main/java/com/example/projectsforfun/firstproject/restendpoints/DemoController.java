@@ -14,9 +14,10 @@ import java.lang.constant.Constable;
 public class DemoController {
 
     private Coach coach;
+    
 
     public DemoController(Coach coach,@Qualifier("getSwimmingCoach") Coach coach2){
-
+         
         System.out.println("s"+coach.getCoachNme());
         System.out.println("y"+coach2.getCoachNme());
 
